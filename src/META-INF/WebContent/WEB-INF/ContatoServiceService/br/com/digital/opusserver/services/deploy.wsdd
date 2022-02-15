@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ContatoServiceService WSDL service -->
+
+  <service name="ContatoService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+      <parameter name="wsdlServiceElement" value="ContatoServiceService"/>
+      <parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+      <parameter name="wsdlServicePort" value="ContatoService"/>
+      <parameter name="className" value="br.com.digital.opusserver.services.ContatoService"/>
+      <parameter name="wsdlPortType" value="ContatoService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getContatosByCodCliente" qname="operNS:getContatosByCodCliente" returnQName="retNS:getContatosByCodClienteReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codCliente" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="cadastrarContato" qname="operNS:cadastrarContato" returnQName="retNS:cadastrarContatoReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codCliente" type="tns:int"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codContrato" type="tns:int"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:ddd1" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:ddd2" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:ddd3" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:ddd4" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:telefone1" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:telefone2" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:telefone3" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:telefone4" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:tratamento" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:comoSerChamado" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codSetor" type="tns:int"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codAssunto" type="tns:int"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codFormaContato" type="tns:int"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:observacao" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="solicitarSenha" qname="operNS:solicitarSenha" returnQName="retNS:solicitarSenhaReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:cpf" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:email" type="tns:string"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:contato" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="solicitarSenha cadastrarContato getContatosByCodCliente"/>
+
+  </service>
+</deployment>

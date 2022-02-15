@@ -1,0 +1,138 @@
+<txg:Texgit xmlns:txg="http://jrimum.org/texgit"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://jrimum.org/texgit http://jrimum.org/texgit/chrome/site/TexgitSchema.xsd" 
+version="1.0-academic">
+  
+    <FlatFile>  
+        <layout>  
+            <name>Arquivo-RetornoCNAB400</name>  
+            <version>Version 01, Published: 15/04/2016</version>  
+            <description>  
+                XML para funcionamento com o Jrimum com Texgit.  
+                Banco do Brasil  
+                Cnab 400  
+            </description>  
+        </layout>  
+        <GroupOfRecords>  
+            <Record name="HeaderArquivo">
+                <GroupOfFields>  
+                    <IdType name="IdenRegistroHeader" value="0" length="1" position="1" />  
+                    <Field name="TipoOperacao" value="2" length="1" />  
+                    <Field name="TipoOperacaoExtenso" value="RETORNO" length="7" />  
+                    <Field name="IdenTipoServico" value="01" length="2"/>
+                    <Field name="IdenTipoServicoExtenso" value="COBRANCA" length="8"/>
+                    <Field name="FEBRABAN"  length="7"/>
+                    <Field name="Agencia"  length="4"  padding="ZERO_LEFT"/>
+                    <Field name="AgenciaDV"  length="1"/>
+                    <Field name="ContaCorrente"  length="8"   padding="ZERO_LEFT"/>
+                    <Field name="ContaCorrenteDV"  length="1"/>
+                    <Field name="FEBRABAN"  length="6"   padding="ZERO_LEFT"/>
+                    <Field name="NomeCedente"  length="30"/>
+                    <Field name="BB"  value="001BANCODOBRASIL" length="18"/>
+                    <Field name="DataGravacao"  length="6"   padding="ZERO_LEFT"/>
+                    <Field name="SequencialRetorno"  length="7"   padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN"  length="42"/>
+                    <Field name="NumeroConvenioLider"  length="7"   padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN"  length="238"/>
+                    <Field name="SequencialRegistro" value="1"  length="6"   padding="ZERO_LEFT"/>                                  
+                </GroupOfFields>  
+            </Record>  
+            
+            <Record name="DetalheArquivo">
+                <GroupOfFields>  
+                    <IdType name="IdenRegistroDetalhe" value="7" length="1" position="1" />
+                    <Field name="FEBRABAN"  length="2"  padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN"  length="14"  padding="ZERO_LEFT"/>
+                    <Field name="Agencia" length="4"   padding="ZERO_LEFT"/>
+                    <Field name="AgenciaDV" length="1"/>
+                    <Field name="ContaCorrente"  length="8"   padding="ZERO_LEFT"/>
+                    <Field name="ContaCorrenteDV" length="1"/>
+                    <Field name="Convenio"  length="7"  padding="ZERO_LEFT"/>
+                    <Field name="NumeroControleParticipante"  length="25"   />
+                    <Field name="NossoNumero"  length="17"   padding="ZERO_LEFT"/>
+                    <Field name="TipoCobranca"  length="1"  padding="ZERO_LEFT"/>
+                    <Field name="TipoCobrancaEspec"  length="1"  padding="ZERO_LEFT"/>
+                    <Field name="DiasCalculo" length="4" padding="ZERO_LEFT"/>  
+                    <Field name="NaturezaRecebimento" length="2"  padding="ZERO_LEFT"/>  
+                    <Field name="PrefixoTitulo"  length="3"/>
+                    <Field name="VariacaoCarteira"  length="3" padding="ZERO_LEFT"/>
+                    <Field name="ContaCaucao" value="0"  length="1"/>
+                    <Field name="TaxaDesconto" length="5"  padding="ZERO_LEFT"/>
+                    <Field name="TaxaIof" length="4"   padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN"  length="1"    padding="ZERO_LEFT"/>
+                    <Field name="CarteiraCobranca" length="2"   padding="ZERO_LEFT"/>
+                    <Field name="Comando" length="2"   padding="ZERO_LEFT"/>
+                    <Field name="DataLiquidacao" length="6" padding="ZERO_LEFT"/>
+                    <Field name="NumeroTitulo" length="10"/>
+                    <Field name="FEBRABAN"  length="20"/>
+                    <Field name="DataVencimento" length="6" padding="ZERO_LEFT"/>
+                    <Field name="ValorTitulo" length="11"   padding="ZERO_LEFT"/>
+                    <Field name="CodBancoRecebedor" length="3"   padding="ZERO_LEFT"/>
+                    <Field name="PrefixoAgenciaRecebedora" length="4"  padding="ZERO_LEFT"/>
+                    <Field name="DvPrefixoRecebedora" length="1"/>
+                    <Field name="EspecieTitulo"  length="2"    padding="ZERO_LEFT"/>
+                    <Field name="DataCredito" length="6" padding="ZERO_LEFT"/>
+                    <Field name="ValorTarifa"  length="5" padding="ZERO_LEFT"/>
+                    <Field name="OutrasDespesas"  length="11"   padding="ZERO_LEFT"/>
+                    <Field name="JurosDesconto" length="11" padding="ZERO_LEFT"/>
+                    <Field name="IofDesconto" length="11" padding="ZERO_LEFT"/>
+                    <Field name="ValorAbatimento" length="11"   padding="ZERO_LEFT"/>
+                    <Field name="DescontoConcedido" length="11"   padding="ZERO_LEFT"/>
+                    <Field name="ValorRecebido" length="11"   padding="ZERO_LEFT"/>
+                    <Field name="JurosMora" length="11"   padding="ZERO_LEFT"/>
+                    <Field name="OutrosRecebimentos" length="11"   padding="ZERO_LEFT"/>
+                    <Field name="Abatimento" length="11"   padding="ZERO_LEFT"/>                                  
+                    <Field name="ValorLancamento"  length="11"/>
+                    <Field name="IndicativoDebitoCredito"  length="1"/>
+                    <Field name="IndicadorValor" length="1"  />
+                    <Field name="ValorAjuste" length="10" padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN" length="1" />
+                    <Field name="FEBRABAN" length="9" padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN" length="7" padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN" length="9" padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN" length="7" padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN" length="9" padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN" length="7" padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN" length="9" padding="ZERO_LEFT"/>
+                    <Field name="IndicativoAutorizacaoLiquidacaoParcial" length="1" padding="ZERO_LEFT"/>
+                    <Field name="FEBRABAN" length="1" />
+                    <Field name="CanalPagamentoTitulo" length="2" padding="ZERO_LEFT"/>
+                    <Field name="SequencialRegistro" length="6"  padding="ZERO_LEFT"/>
+                </GroupOfFields>  
+            </Record>  
+            
+            <Record name="TrailerArquivo">
+                <GroupOfFields>  
+                    <IdType name="IdenRegistroTrailer" value="9" length="1" position="1" />                    
+                    <Field name="Position2"  length="1" value="2"/>
+                    <Field name="Position3"  length="2" value="01"/>
+                    <Field name="Position4"  length="3" value="001"/>
+                    <Field name="FEBRABAN"  length="10" />
+                    <Field name="CobrancaSimplesQuantidadeTitulos"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaSimplesValorTotal"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaSimplesNumeroAviso"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaSimplesBrancos"  length="10" />
+                    <Field name="CobrancaVinculadaQuantidadeTitulos"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaVinculadaValorTotal"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaVinculadaNumeroAviso"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaVinculadaBrancos"  length="10" />
+                    <Field name="CobrancaCaucionadaQuantidadeTitulos"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaCaucionadaValorTotal"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaCaucionadaNumeroAviso"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaCaucionadaBrancos"  length="10" />
+                    <Field name="CobrancaDescontadaQuantidadeTitulos"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaDescontadaValorTotal"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaDescontadaNumeroAviso"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaDescontadaBrancos"  length="10" />
+                    <Field name="CobrancaVendorQuantidadeTitulos"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaVendorValorTotal"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaVendorNumeroAviso"  length="8" padding="ZERO_LEFT"/>
+                    <Field name="CobrancaVendorBrancos"  length="10" />                    
+                    <Field name="SequencialRegistro" value="1"  length="6"   padding="ZERO_LEFT"/>                                  
+                </GroupOfFields>  
+            </Record> 
+            
+        </GroupOfRecords>  
+    </FlatFile>  
+  
+</txg:Texgit>  

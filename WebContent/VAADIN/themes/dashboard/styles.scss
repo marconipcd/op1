@@ -1,0 +1,20 @@
+@import "addons.scss";
+@import "dashboard.scss";
+@include font-open-sans;
+@include icons-fontello;
+@include dashboard-keyframes;
+
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in dashboard.scss */
+.dashboard {
+  @include addons;
+  @include dashboard;
+}
+
+.v-form-form-default{
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:30px;
+    margin-right:30px;
+}

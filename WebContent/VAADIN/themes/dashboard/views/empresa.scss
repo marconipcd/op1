@@ -1,0 +1,62 @@
+@mixin dashboard-empresa-view {
+
+
+
+	.v-caption-caption-align-empresa{
+		display: inline-block;
+		padding-left: 10px;
+		padding-rigth: 5px;
+		width: 130px;
+	}
+	.pn-logo-align-empresa{
+		margin-left: 250px;
+		border: 1px solid #c3c3c3;
+		border-radius:5px;
+		padding: 10px;
+	}
+
+	.v-label-label-pn-logo-align-empresa-px{
+		margin-left: 440px;
+		padding: 10px;
+	}
+
+	
+	/*.v-caption-caption-align-general{
+		display: inline-block;
+		padding-left: 10px;
+		padding-rigth: 5px;
+		width: 180px;
+	}
+	
+	
+	
+	
+	
+	.dashboard .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-captioncell, .dashboard .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-contentcell, .dashboard .v-formlayout-margin-bottom > tbody > .v-formlayout-lastrow > .v-formlayout-errorcell {
+    	padding-bottom: 1px;
+    }
+}
+	
+	*/
+	
+	.v-textfield-textfield-empresa-invalid{
+		color:red;
+	}
+	.v-textfield-textfield-empresa-valid{
+		color:green;
+	}
+	.v-caption-textfield-empresa-valid{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 130px;
+	}
+	.v-caption-textfield-empresa-invalid{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 130px;
+	}
+	
+	
+}

@@ -1,0 +1,1 @@
+$wnd.com_digital_opuserp_widgetset_OpuserpWidgetset.runAsyncCallback1('Zlb(1407,1,c9d);_.yd=function coc(){K8b((!F8b&&(F8b=new L8b),F8b),this.b.e)};iVd(zm)(1);\n//# sourceURL=com.digital.opuserp.widgetset.OpuserpWidgetset-1.js\n')

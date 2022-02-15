@@ -1,0 +1,103 @@
+@mixin fornecedor-view{
+	
+		
+	.v-caption-caption-align-fornecedores{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 140px;
+	}
+
+	.v-caption-caption-align-fornecedores-top{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 152px;
+	}
+	
+	.v-slot-caption-align-fornecedores-bottom{
+    	padding-top:15px;
+    
+	}
+	
+	.v-caption-caption-align-data_alteracao{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 100px;
+	}
+	
+	
+	.v-textfield-textfield-invalid{
+		color:red;
+	}
+	.v-textfield-textfield-valid{
+		color:green;
+	}
+	
+	.v-caption-textfield-invalid{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 152px;
+	}
+	
+	.v-caption-textfield-valid{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width:152px;
+	}
+	
+	.v-textarea-text-area-border{
+		border-color: #CCCCCC;
+		border-style: solid;
+	}
+	
+	.v-textfield-textfield-fornecedor-align{
+  		text-align: right;
+  		display: inline-block;   
+  
+	}	
+	.v-caption-textfield-fornecedor-align{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 140px;
+	}
+	
+	.v-window-fornecedor_editor .popupContent .v-window-wrap .v-window-contents .v-scrollable{
+		overflow: hidden !important;
+	}
+	
+	.v-caption-transportadora_enable{
+		padding-left: 10px;
+		padding-right: 5px;
+		color: red;
+	}
+	
+	
+	.v-caption-caption-align-visualizar-data{
+	display: inline-block;    
+	padding-right: 5px;
+	padding-left: 10px;
+	width: 340px;
+	}
+	
+	.v-caption-caption-align-visualizar-UpDown{
+		display: inline-block;    
+		padding-right: 5px;
+		padding-left: 10px;
+		width: 289px;
+	}
+	
+	.v-caption-caption-align-visualizar-conexao{
+		display: inline-block;    
+		padding-right: 5px;
+		padding-left: 10px;
+		width: 170px;
+	}
+	
+	
+	
+}

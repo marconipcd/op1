@@ -1,0 +1,12 @@
+@mixin dashboard-dateField {	
+
+	
+	.v-datefield-button  {
+		   border: none;
+		   background: none;
+		   background: url(../img/Calendar-32.png);
+		   width:16px;
+		   height:16px;
+	}
+
+}

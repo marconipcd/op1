@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE ivy-module [
+	<!ENTITY vaadin.version "7.2.5">
+]>
+<ivy-module version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+	<info organisation="com.example" module="v7proj" />
+	<configurations>
+		<!-- The default configuration, which should be deployed to the server -->
+		<conf name="default" />
+		<!-- A configuration only needed when compiling the widget set. Should 
+			not be deployed to the server -->
+		<conf name="widgetset-compile" />
+		<!-- A configuration used in compilation of server side classes only.
+			Should be deployed to the server -->
+		<conf name="nodeploy" />
+	</configurations>
+	<dependencies defaultconf="default" defaultconfmapping="default->default">
+		<!-- The core server part of Vaadin -->
+		<dependency org="com.vaadin" name="vaadin-server" rev="&vaadin.version;" />
+
+		<!-- Vaadin themes -->
+		<dependency org="com.vaadin" name="vaadin-themes" rev="&vaadin.version;" />
+
+		<!-- Push support -->
+		<dependency org="com.vaadin" name="vaadin-push" rev="&vaadin.version;" />
+
+		<!-- Precompiled DefaultWidgetSet -->
+		<dependency org="com.vaadin" name="vaadin-client-compiled"
+			rev="&vaadin.version;" />
+
+		<!-- Vaadin client side, needed for widget set compilation -->
+		<dependency org="com.vaadin" name="vaadin-client" rev="&vaadin.version;"
+			 conf="widgetset-compile->default" />
+
+		<!-- Compiler for custom widget sets. Should not be deployed -->
+		<dependency org="com.vaadin" name="vaadin-client-compiler"
+			rev="&vaadin.version;" conf="widgetset-compile->default" />
+			
+		<dependency org="com.vaadin" name="vaadin-push" rev="&vaadin.version;" conf="default->default" />
+		
+	
+		
+		
+		
+		<!-- Mysql Connector -->
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.40"/>
+		
+		<!-- Hibernate 4 -->	
+		<dependency org="org.hibernate" name="hibernate-core" rev="4.1.10.Final"/>
+        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="4.1.10.Final"/>
+        <dependency org="org.hibernate.common" name="hibernate-commons-annotations" rev="4.0.1.Final"/>            
+        <dependency org="org.slf4j" name="slf4j-api" rev="1.7.3"/>
+        <dependency org="org.hibernate.javax.persistence" name="hibernate-jpa-2.0-api" rev="1.0.1.Final"/>
+        
+        
+        
+        
+          <!-- JFreeChart -->
+        <dependency org="org.jfree" name="jfreechart" rev="1.0.14"/>
+                    
+        <!-- Chart -->
+        <dependency org="com.vaadin.addon" name="vaadin-charts" rev="1.0.1" />
+        
+        <!-- CurrencyField -->
+        <dependency org="org.vaadin.addons" name="currencyfield" rev="1.0.1" />
+
+		<!-- JCabi -->        
+        <dependency org="com.jcabi" name="jcabi-maven-plugin" rev="0.9.1"/>
+        <dependency org="com.jcabi" name="jcabi-aspects" rev="0.13"/>
+        
+        <!-- Editor -->
+        <dependency org="org.vaadin.addons" name="aceeditor" rev="0.8.10" />
+        
+        <!-- Dock -->
+        <dependency org="org.vaadin.addons" name="dock" rev="1.0.0" />
+        
+        <!-- PagedTable -->
+        <dependency org="org.vaadin.addons" name="pagedtable" rev="0.6.5" />
+      
+      	<!-- 5.3.4 -->
+      	<dependency org="com.itextpdf" name="itextpdf" rev="5.5.4"/>      
+        
+        
+        <dependency org="br.com.caelum.stella" name="caelum-stella-boleto" rev="2.0.3" />
+        <dependency org="br.com.caelum.stella" name="caelum-stella-core" rev="2.1.0" />
+        <dependency org="org.vaadin.addons" name="ckeditor-wrapper-for-vaadin" rev="7.8.5" />        
+        <dependency    org="org.xhtmlrenderer"   name="core-renderer"   rev="R8pre2" />       
+        <dependency org="com.jcraft" name="jsch" rev="0.1.50"/>
+        <dependency org="org.apache.poi" name="poi" rev="3.9"/>
+            
+        <dependency org="org.vaadin.addons" name="dragdroplayouts" rev="1.0" />
+        <dependency org="com.thoughtworks.xstream" name="xstream"  rev="1.4.7" />
+        
+        <dependency org="org.vaadin" name="suggestfield" rev="0.0.1" />
+        <dependency org="org.vaadin.addons" name="contextmenu" rev="4.5" />
+        <dependency org="org.vaadin.addons" name="popupbutton" rev="2.5.0" />
+        <dependency org="javax.servlet" name="servlet-api" rev="2.5"/>
+        <dependency org="org.apache.commons" name="commons-email" rev="1.3.3"/>
+        
+        <dependency org="org.apache.commons" name="commons-email" rev="1.3.1"/>
+        
+        <dependency org="com.thoughtworks.xstream" name="xstream"  rev="1.3.1" />
+        
+        <dependency org="org.vaadin.addons" name="mediaelementjs-player" rev="1.2.7" />
+        
+        <dependency org="org.vaadin.addons" name="youtubeplayer" rev="1.1.4" />
+        <dependency org="com.boletobancario" name="boletofacilsdk" rev="1.0.0" />
+        <dependency org="org.glassfish.jersey.core" name="jersey-client" rev="2.8.0" />
+        <dependency org="org.glassfish.jersey.media" name="jersey-media-json-jackson" rev="2.8.0" />
+              
+	</dependencies>
+</ivy-module>

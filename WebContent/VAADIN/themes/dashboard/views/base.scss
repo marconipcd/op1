@@ -1,0 +1,42 @@
+@mixin base-view{
+
+	.v-caption-caption-align-base{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 120px;
+	}
+	
+	.v-caption-caption-align-base-ddd{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 132px;
+	}
+	
+	.v-caption-caption-align-mud-venc{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 171px;
+	}
+	
+	.v-caption-caption-align-autocensura{
+    	display: inline-block;    
+    	padding-right: 5px;
+	}
+
+	.v-caption-caption-align-base-new{
+    	display: inline-block;    
+    	padding-right: px;
+    	padding-left: 0px;
+    	width: 0px;
+	}
+	
+	.v-layout-caption-align-base-label{
+    	display: inline-block;    
+    	padding-bottom: px;
+    	padding-left: 12px;
+    	width: 0px;
+	}
+}

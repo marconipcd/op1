@@ -1,0 +1,125 @@
+<txg:Texgit xmlns:txg="http://jrimum.org/texgit"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://jrimum.org/texgit http://jrimum.org/texgit/chrome/site/TexgitSchema.xsd" 
+version="1.0-academic">
+  
+    <FlatFile>  
+        <layout>  
+            <name>Arquivo-RemessaCNAB400</name>  
+            <version>Version 01, Published: 15/04/2016</version>  
+            <description>  
+                XML para funcionamento com o Jrimum com Texgit.  
+                SICREDI
+                Cnab 400  
+            </description>  
+        </layout>  
+        <GroupOfRecords>  
+            <Record name="HeaderArquivo">
+                <GroupOfFields>  
+                    <IdType name="IdenRegistroHeader" value="0" length="1" position="1" />  
+                    <Field  name="IdenArqRemessa" value="1" length="1" />  
+                    <Field  name="LiteralRemessa" value="REMESSA" length="7" />  
+                    <Field  name="CodServicoCobranca" value="01" length="2"/>
+                    <Field  name="LiteralCobranca" value="COBRANCA" length="15"/>                    
+                    <Field  name="CodBeneficiario"  length="5"  padding="ZERO_LEFT"/>                   
+                    <Field  name="CpfCnpjBeneficiario"  length="14"   padding="ZERO_LEFT"/>
+                    <Field  name="Filler"  length="31"   />                    
+                    <Field  name="SICREDI"  value="748SICREDI" length="18"/>
+                    <Field  name="DataGravacao"  length="8" />                    
+                    <Field  name="Filler"  length="8"  />
+                    <Field  name="SequencialRemessa"  length="7"   padding="ZERO_LEFT"/>
+                    <Field  name="Filler"  length="273"   />                    
+                    <Field  name="VersaoSistema"  length="4"  />
+                    <Field  name="SequencialRegistro" value="1" length="6" padding="ZERO_LEFT"/>                                  
+                </GroupOfFields>  
+            </Record>  
+            
+            <Record name="DetalheArquivo" repeatable="true" >
+                <GroupOfFields>  
+                    <IdType name="IdenRegistroDetalhe" value="1" length="1" position="1" />  
+                    <Field name="TipoCobranca" length="1" value="A" />
+                    <Field name="TipoCarteira" length="1" value="A" />
+                    <Field name="TipoImpressao" length="1" value="A" />
+                    <Field name="Filler" length="12"  />
+                    <Field name="TipoMoeda" length="1" value="A"  />
+                    <Field name="TipoDesconto" length="1" value="B"  />
+                    <Field name="TipoJuros" length="1" value="B"  />
+                    <Field name="Filler" length="28"  />
+                    <Field name="NossoNumero"  length="9" />
+                    <Field name="Filler" length="6"  />
+                    <Field name="DataInstrucao"  length="8"/>
+                    <Field name="CampoAlterado"  length="1"/>                    
+                    <Field name="PostagemTitulo"  length="1"/>
+                    <Field name="Filler"  length="1"/>
+                    <Field name="EmissaoBoleto"  length="1"/>
+                    <Field name="NumeroParcelaCarne"  length="2"/>
+                    <Field name="NumeroTotalParcelasCarne"  length="2"/>
+                    <Field name="Filler"  length="4"/>
+                    <Field name="ValorDescontoDiaAntecip"  length="10" padding="ZERO_LEFT"/>
+                    <Field name="PercentMultaPgtoAtraso"  length="4" padding="ZERO_LEFT"/>
+                    <Field name="Filler"  length="12"/>
+                    <Field name="Instrucao"  length="2"/>
+                    <Field name="SeuNumero"  length="10" padding="ZERO_LEFT"/>
+                    <Field name="DataVencimento"  length="6"/>
+                    <Field name="ValorTitulo"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="Filler"  length="9"/>
+                    <Field name="EspecieDoc"  length="1"/>
+                    <Field name="AceiteTitulo"  length="1"/>
+                    <Field name="DataEmissao"  length="6"/>
+                    <Field name="InstrucaoProtestoAutomatico"  length="2"/>
+                    <Field name="NumeroDiasProtestoAutomatico"  length="2"/>
+                    <Field name="ValorPercJurosDiaAtraso"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="DataLimiteConcDesconto"  length="6" />
+                    <Field name="ValorPercDesconto"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="Filler"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="ValorAbatimento"  length="13" padding="ZERO_LEFT"/>
+                    <Field name="TipoPessoaPagador"  length="1" />
+                    <Field name="Filler"  length="1" padding="ZERO_LEFT"/>
+                    <Field name="CPFCNPJPagador"  length="14" padding="ZERO_LEFT"/>
+                    <Field name="NomePagador"  length="40" />
+                    <Field name="EnderecoPagador"  length="40" />
+                    <Field name="CodPagador"  length="5" />
+                    <Field name="Filler"  length="6" padding="ZERO_LEFT"/>
+                    <Field name="Filler"  length="1" />
+                    <Field name="CepPagador"  length="8" />
+                    <Field name="CodPagadorCliente"  length="5" padding="ZERO_LEFT"/>
+                    <Field name="CpfCnpjSacadorAvalista"  length="14" padding="ZERO_LEFT"/>
+                    <Field name="NomeSacadorAvalista"  length="41" />
+                    <Field name="NumeroSequencialRegistro"  length="6" padding="ZERO_LEFT"/>
+                    
+                    
+                    
+                </GroupOfFields>  
+               
+                <GroupOfInnerRecords>
+                	<Record name="DetalheArquivoMulta" repeatable="true">
+		                <GroupOfFields>  
+		                	<IdType name="IdenRegistroTransacao" value="5" length="1" position="1" />  
+		                    <Field name="TipoServico" value="99" length="2" />
+		                    <Field name="CodigoMulta" length="1" padding="ZERO_LEFT"/>
+		                    <Field name="DataInicio" length="8" padding="ZERO_LEFT"/>
+		                    <Field name="ValorPercentual" length="12" padding="ZERO_LEFT"/>
+		                    <Field name="FEBRABRAN"  length="372"/>
+		                    <Field name="SequencialRegistro" length="6"  padding="ZERO_LEFT"/>  
+		                </GroupOfFields>  
+		            </Record> 
+                </GroupOfInnerRecords>
+            </Record>  
+            
+            
+            
+            <Record name="TrailerArquivo">
+                <GroupOfFields>  
+                    <IdType name="IdenRegistroHeader" value="9" length="1" position="1" />
+                    <Field name="IdenArqRemessa"  length="1" value="1"/>
+                    <Field name="IdenArqRemessa"  length="3" value="748"/>
+                    <Field name="CodBeneficiario"  length="5" />                                        
+                    <Field name="FEBRABAN"  length="384"/>                    
+                    <Field name="SequencialRegistro" value="1"  length="6"   padding="ZERO_LEFT"/>                                  
+                </GroupOfFields>  
+            </Record> 
+            
+        </GroupOfRecords>  
+    </FlatFile>  
+  
+</txg:Texgit>  

@@ -1,0 +1,373 @@
+@mixin cliente-view {
+
+	.v-caption-caption-align{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 120px;
+	}
+	
+	.v-caption-caption-align-table-osp{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 133px;
+	}
+	
+	
+	
+	.v-caption-caption-align-pedido-abertura{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 380px;
+	}
+	
+	
+	
+	.v-caption-caption-align-form-pgto{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 140px;
+	}
+	
+	.v-caption-caption-align-pedido{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 177px;
+	}
+	
+	
+	
+	.v-caption-align-404-data-emissao{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 404px;
+	}
+	
+	.v-caption-caption-align-produto{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 173px;
+	}
+		
+	.v-caption-caption-align-abertura{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 381px;
+	}
+	
+	.v-caption-caption-align-assistencia-tecnica{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 233px;
+	}
+	.v-caption-caption-align-assistencia-tecnica-2{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 110px;
+	}
+	
+	.v-caption-caption-align-servico{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 137px;
+	}
+	
+	.v-caption-caption-align-contato-crm{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 162px;
+	}
+	
+	.v-caption-caption-align-contrato-bancario{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 129px;
+	}
+	
+	
+	.v-caption-caption-align-editar-titulo{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 139px;
+	}
+	
+	.v-caption-caption-align-editar-titulo-cp{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 205px;
+	}
+	
+	.v-caption-caption-align-novo-titulo{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 166px;
+	}
+	
+	.v-caption-caption-align-relatorio-cliente{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 80px;
+	}
+	.v-filterselect-auxfield{
+		margin-left: 50px;
+	}
+	.v-textfield-auxfield{
+		margin-left: 50px;
+	}
+	.v-horizontallayout-hl_button_relatorio_cliente
+	{
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	.v-caption-telefone{
+		display: inline-block;
+		padding-rigth: 5px;
+		padding-left: 21px;
+		
+	}
+	
+	.v-caption-telefone2{
+		display: inline-block;
+		padding-rigth: 5px;
+		padding-left: 15px;
+		
+	}
+
+	.v-tabsheet-content-custom-form_tabsheet .v-tabsheet-tabsheetpanel .v-scrollable .v-verticallayout .v-slot .v-layout .v-formlayout-margin-top > tbody .v-formlayout-row .v-formlayout-captioncell .v-caption-caption-align{
+		width: 108px;
+	}
+	
+	
+	
+		
+	
+	.title_outros_end{
+		font-size: 14px;
+	}
+	
+	.v-label-title_outros_end{ 
+		height: 35px;
+		padding-left: 160px;
+	}
+	
+	.v-checkbox{
+		padding-left: 160px;
+		font-size: 12px;
+	}
+
+
+	.v-tabsheet-tabs-custom-form_tabsheet > tbody > tr .v-tabsheet-tabitemcell .v-tabsheet-tabitem .v-caption {
+		padding: 5px 1.3em;
+	}
+	
+	.v-tabsheet-tabs-custom-form_tabsheet > tbody > tr td.v-tabsheet-tabitemcell .v-tabsheet-tabitemcell-selected .v-caption {
+		padding-bottom: 5px;
+	}
+	
+	.v-horizontallayout-horizontal-tabsheet{
+		padding: 12px;
+	}
+	
+	.v-slot-cb-defaut{
+		margin: 2;
+	}
+	
+	.v-upload-logo-defaut{
+		
+	}
+
+	.v-caption-caption-align-tabOutros{
+		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 20px;
+    	width: 150px;
+	}
+
+	.v-textfield-invalid-cpf{
+		color:red;
+	}
+	.v-textfield-valid-cpf{
+		color:green;
+	}
+
+	.v-caption-invalid-cpf{
+		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 120px;
+	}
+
+	.v-caption-valid-cpf{
+		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 120px;
+	}
+	 
+	 
+	 .v-caption-caption-align-complemento{
+    	display: inline-block;    
+    	padding-right: 3px;
+    	padding-left: 0px;
+    	padding-bottom: 10px;
+    	width: 120px;
+	}
+	
+	 .v-caption-caption-align-referencia{
+    	display: inline-block;    
+    	padding-right: 0px;
+    	padding-left: 0px;
+    	padding-bottom: 10px;   	
+	}
+	
+	.v-caption-caption-align-saldo{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 20px;
+    	padding-bottom: 154px;   
+    	width: 150px;	
+	}
+
+	.v-textfield-textfield-cliente-align{
+  		text-align: right;
+  		display: inline-block;   
+  
+	}	
+	.v-caption-textfield-cliente-align{
+		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 20px;
+    	width: 150px;
+	}
+	
+	.v-horizontallayout-horizontal-hlFloatUtil{
+		margin-top: 15px;
+	}
+	
+	.v-horizontallayout-horizontal-hlRootUtil{
+		margin-top: 14px;
+	}
+	
+
+
+
+
+
+	
+	
+	
+	
+	.v-caption-caption-align-editar-produto{
+    	display: inline-block;    
+    	padding-right: 0px;
+    	padding-left: 0px;
+    	width: 80px;
+	}
+	
+	.v-caption-caption-align-editar-despesaOp{
+    	display: inline-block;    
+    	padding-right: 1px;
+    	padding-left: 1px;
+    	width: 152px;
+	}
+	.v-caption-caption-align-editar-codigoBr{
+    	display: inline-block;    
+    	padding-right: 1px;
+    	padding-left: 1px;
+    	width: 110px;
+	}
+	
+	.v-caption-caption-align-editar-status{
+    	display: inline-block;    
+    	padding-right: 1px;
+    	padding-left: 1px;
+    	width: 83px;
+	}
+	
+	.v-caption-caption-align-editar-fracionar{
+    	display: inline-block;    
+    	padding-right: 1px;
+    	padding-left: 1px;
+    	width: 315px;
+	}
+	.v-caption-caption-align-editar-saldo{
+    	display: inline-block;    
+    	padding-right: 14px;
+    	padding-left: 1px;
+    	width: 440px;
+	}
+
+	.v-caption-caption-align-editar-lucro{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 212px;
+	}
+	
+	.v-caption-caption-align-editar-serial{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 266px;
+	}
+	v-button-caption-align-editar-btserial{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 239px;
+	}
+	
+	v-button-caption-align-editar-serialLista{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 2px;
+    	width: 30px;
+	}
+
+	.v-textfield-invalid-serial{
+		color:red;
+		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 2px;
+    	width: 30px;
+	}
+	.v-textfield-valid-serial{
+		color:green;
+		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 2px;
+    	width: 30px;
+	}
+
+	.v-textfield-destaque-campo{
+		font-weight: bold;
+		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 2px;
+    	width: 30px;
+	}
+
+
+
+
+
+
+	 
+	 
+}

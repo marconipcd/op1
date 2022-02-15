@@ -1,0 +1,38 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from OseServiceService WSDL service -->
+
+  <service name="OseService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+      <parameter name="wsdlServiceElement" value="OseServiceService"/>
+      <parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+      <parameter name="wsdlServicePort" value="OseService"/>
+      <parameter name="className" value="br.com.digital.opusserver.services.OseServiceSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="OseService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="concluirOse" qname="operNS:concluirOse" xmlns:operNS="http://services.opusserver.digital.com.br" soapAction="" >
+        <parameter qname="pns:cod_ose" xmlns:pns="http://services.opusserver.digital.com.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:tecnico" xmlns:pns="http://services.opusserver.digital.com.br" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="encaminharOse" qname="operNS:encaminharOse" xmlns:operNS="http://services.opusserver.digital.com.br" soapAction="" >
+        <parameter qname="pns:os" xmlns:pns="http://services.opusserver.digital.com.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:veiculo" xmlns:pns="http://services.opusserver.digital.com.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:tecnico" xmlns:pns="http://services.opusserver.digital.com.br" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getOse" qname="operNS:getOse" xmlns:operNS="http://services.opusserver.digital.com.br" returnQName="retNS:getOseReturn" xmlns:retNS="http://services.opusserver.digital.com.br" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:codEmpresa" xmlns:pns="http://services.opusserver.digital.com.br" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="concluirOse encaminharOse getOse"/>
+
+  </service>
+</deployment>

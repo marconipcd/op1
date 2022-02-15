@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ContratoServiceService WSDL service -->
+
+  <service name="ContratoService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+      <parameter name="wsdlServiceElement" value="ContratoServiceService"/>
+      <parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+      <parameter name="wsdlServicePort" value="ContratoService"/>
+      <parameter name="className" value="br.com.digital.opusserver.services.ContratoService"/>
+      <parameter name="wsdlPortType" value="ContratoService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getTerminoContrato" qname="operNS:getTerminoContrato" returnQName="retNS:getTerminoContratoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codContrato" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getProxVencimento" qname="operNS:getProxVencimento" returnQName="retNS:getProxVencimentoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codContrato" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="buscarPorId" qname="operNS:buscarPorId" returnQName="retNS:buscarPorIdReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codContrato" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getContratosPerCodCliente" qname="operNS:getContratosPerCodCliente" returnQName="retNS:getContratosPerCodClienteReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codCliente" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getStatusConexao" qname="operNS:getStatusConexao" returnQName="retNS:getStatusConexaoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codContrato" type="tns:int"/>
+      </operation>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="alterarPlanoAcessoPrePago" qname="operNS:alterarPlanoAcessoPrePago" returnQName="retNS:alterarPlanoAcessoPrePagoReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codContrato" type="tns:int"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codPlanoNovo" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="getTerminoContrato buscarPorId getStatusConexao getProxVencimento getContratosPerCodCliente alterarPlanoAcessoPrePago"/>
+
+  </service>
+</deployment>

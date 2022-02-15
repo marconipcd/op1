@@ -1,0 +1,73 @@
+@mixin transportadora-view{
+	
+		
+	.v-textfield-textfield-transportadora-invalid{
+		color:red;
+	}
+	.v-textfield-textfield-transportadora-valid{
+		color:green;
+	}
+	.v-caption-textfield-transportadora-valid{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 120px;
+	}
+	.v-caption-textfield-transportadora-invalid{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 120px;
+	}
+		
+	.v-caption-caption-align-transportadora{
+    	display: inline-block;   
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 120px;
+	}
+	
+	.v-caption-caption-align-transportadora-site{
+    	display: inline-block;   
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 50px;
+	}
+	
+	.v-caption-caption-align-transportadora-0800{
+    	display: inline-block;   
+    	padding-right: 5px;
+    	padding-left: 74px;
+    	width: 120px;
+	}
+	
+	.v-caption-caption-align-transportadora-foneAlternativo{
+    	display: inline-block;   
+    	padding-right: 5px;
+    	padding-left: 74px;
+    	width: 120px;
+	}
+	
+	.v-slot-form-cutom-two-collum-firt{
+		width:80%;
+	}
+	.v-slot-form-cutom-two-collum-second{
+		width:10%;
+	}
+	
+	.v-textfield-textfield-transportdora-align{
+  		text-align: right;
+  		display: inline-block;   
+  
+	}
+	
+	.v-caption-textfield-transportdora-align{
+  		text-align: right;
+  		display: inline-block;   
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 120px;
+	}
+	
+	
+}

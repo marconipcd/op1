@@ -1,0 +1,34 @@
+@mixin cep-view{
+	
+		
+	.v-caption-caption-align-cep{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 70px;
+	}
+	
+	
+	.v-textfield-textfield-cep-invalid{
+		color:red;
+	}
+	.v-textfield-textfield-cep-valid{
+		color:green;
+	}
+	
+	.v-caption-textfield-cep-invalid{
+ 		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 70px;
+	}
+	
+	.v-caption-textfield-cep-valid{
+ 		display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 70px;
+	}
+	
+	
+}

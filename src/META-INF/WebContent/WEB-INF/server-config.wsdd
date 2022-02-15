@@ -1,0 +1,425 @@
+<ns1:deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ns1="http://xml.apache.org/axis/wsdd/">
+ <ns1:globalConfiguration>
+  <ns1:parameter name="sendMultiRefs" value="true"/>
+  <ns1:parameter name="disablePrettyXML" value="true"/>
+  <ns1:parameter name="adminPassword" value="admin"/>
+  <ns1:parameter name="attachments.Directory" value="/home/maconi/workspace_java/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/OpusServer/WEB-INF/attachments"/>
+  <ns1:parameter name="dotNetSoapEncFix" value="true"/>
+  <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
+  <ns1:parameter name="sendXMLDeclaration" value="true"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:requestFlow>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="session"/>
+   </ns1:handler>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="request"/>
+    <ns1:parameter name="extension" value=".jwr"/>
+   </ns1:handler>
+  </ns1:requestFlow>
+ </ns1:globalConfiguration>
+ <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <ns1:service name="EnderecoService2" provider="java:RPC" style="wrapped" use="literal">
+  <ns2:operation name="teste" qname="ns1:teste" returnQName="ns1:testeReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns2:parameter qname="ns1:i" type="xsd:int"/>
+  </ns2:operation>
+  <ns1:parameter name="allowedMethods" value="teste"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="EnderecoService2"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.EnderecoService2"/>
+  <ns1:parameter name="wsdlServicePort" value="EnderecoService2"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="EnderecoService2Service"/>
+ </ns1:service>
+ <ns1:service name="ContratoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getTerminoContrato" qname="ns2:getTerminoContrato" returnQName="ns2:getTerminoContratoReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns2:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="getProxVencimento" qname="ns3:getProxVencimento" returnQName="ns3:getProxVencimentoReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns3:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="buscarPorId" qname="ns4:buscarPorId" returnQName="ns4:buscarPorIdReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns4:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="getContratosPerCodCliente" qname="ns5:getContratosPerCodCliente" returnQName="ns5:getContratosPerCodClienteReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:codCliente" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="getStatusConexao" qname="ns6:getStatusConexao" returnQName="ns6:getStatusConexaoReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns6:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="alterarPlanoAcessoPrePago" qname="ns7:alterarPlanoAcessoPrePago" returnQName="ns7:alterarPlanoAcessoPrePagoReturn" returnType="xsd:boolean" soapAction="" xmlns:ns7="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns7:codContrato" type="xsd:int"/>
+   <ns1:parameter qname="ns7:codPlanoNovo" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="sendMultiRefs" value="false"/>
+  <ns1:parameter name="wsdlServicePort" value="ContratoService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.ContratoService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="allowedMethods" value="getTerminoContrato buscarPorId getStatusConexao getProxVencimento getContratosPerCodCliente alterarPlanoAcessoPrePago"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="ContratoServiceService"/>
+  <ns1:parameter name="wsdlPortType" value="ContratoService"/>
+  <ns1:parameter name="sendXsiTypes" value="false"/>
+ </ns1:service>
+ <ns1:service name="LoginCentralService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="fazerLogin" qname="ns8:fazerLogin" returnQName="ns8:fazerLoginReturn" returnType="xsd:string" soapAction="" xmlns:ns8="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns8:usuario" type="xsd:string"/>
+   <ns1:parameter qname="ns8:senha" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="solicitarRedefinicaoSenha" qname="ns9:solicitarRedefinicaoSenha" returnQName="ns9:solicitarRedefinicaoSenhaReturn" returnType="xsd:string" soapAction="" xmlns:ns9="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns9:cpf" type="xsd:string"/>
+   <ns1:parameter qname="ns9:email" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="checarCodigoRedefinicao" qname="ns10:checarCodigoRedefinicao" returnQName="ns10:checarCodigoRedefinicaoReturn" returnType="xsd:string" soapAction="" xmlns:ns10="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns10:codigo" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="sendMultiRefs" value="false"/>
+  <ns1:parameter name="wsdlServicePort" value="LoginCentralService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.LoginCentralService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="allowedMethods" value="checarCodigoRedefinicao fazerLogin solicitarRedefinicaoSenha"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="LoginCentralServiceService"/>
+  <ns1:parameter name="wsdlPortType" value="LoginCentralService"/>
+  <ns1:parameter name="sendXsiTypes" value="false"/>
+ </ns1:service>
+ <ns1:service name="ChangePassService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="alterarSenha" qname="ns11:alterarSenha" returnQName="ns11:alterarSenhaReturn" returnType="xsd:boolean" soapAction="" xmlns:ns11="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns11:login" type="xsd:string"/>
+   <ns1:parameter qname="ns11:senha_antiga" type="xsd:string"/>
+   <ns1:parameter qname="ns11:senha_nova" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="redefinirSenha" qname="ns12:redefinirSenha" returnQName="ns12:redefinirSenhaReturn" returnType="xsd:string" soapAction="" xmlns:ns12="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns12:codigoRedefinicao" type="xsd:string"/>
+   <ns1:parameter qname="ns12:senha_nova" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="sendMultiRefs" value="false"/>
+  <ns1:parameter name="wsdlServicePort" value="ChangePassService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.ChangePassService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="allowedMethods" value="alterarSenha redefinirSenha"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="ChangePassServiceService"/>
+  <ns1:parameter name="wsdlPortType" value="ChangePassService"/>
+  <ns1:parameter name="sendXsiTypes" value="false"/>
+ </ns1:service>
+ <ns1:service name="CrmFormasContatoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getFormasContato" qname="ns13:getFormasContato" returnQName="ns13:getFormasContatoReturn" returnType="xsd:string" soapAction="" xmlns:ns13="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns13:codEmpresa" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="sendMultiRefs" value="false"/>
+  <ns1:parameter name="wsdlServicePort" value="CrmFormasContatoService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.CrmFormasContatoService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="allowedMethods" value="getFormasContato"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="CrmFormasContatoServiceService"/>
+  <ns1:parameter name="wsdlPortType" value="CrmFormasContatoService"/>
+  <ns1:parameter name="sendXsiTypes" value="false"/>
+ </ns1:service>
+ <ns1:service name="ContaBancariaService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getContaBancaria" qname="ns14:getContaBancaria" returnQName="ns14:getContaBancariaReturn" returnType="xsd:string" soapAction="" xmlns:ns14="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns14:codEmpresa" type="xsd:int"/>
+   <ns1:parameter qname="ns14:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getContaBancaria"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="ContaBancariaService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.ContaBancariaService"/>
+  <ns1:parameter name="wsdlServicePort" value="ContaBancariaService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="ContaBancariaServiceService"/>
+ </ns1:service>
+ <ns1:service name="ParametrosBoletoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="cobrarTaxaBoleto" qname="ns15:cobrarTaxaBoleto" returnQName="ns15:cobrarTaxaBoletoReturn" returnType="xsd:boolean" soapAction="" xmlns:ns15="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns15:codCliente" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="sendMultiRefs" value="false"/>
+  <ns1:parameter name="wsdlServicePort" value="ParametrosBoletoService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.ParametrosBoletoService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="allowedMethods" value="cobrarTaxaBoleto"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="ParametrosBoletoServiceService"/>
+  <ns1:parameter name="wsdlPortType" value="ParametrosBoletoService"/>
+  <ns1:parameter name="sendXsiTypes" value="false"/>
+ </ns1:service>
+ <ns1:service name="ContatoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getContatosByCodCliente" qname="ns16:getContatosByCodCliente" returnQName="ns16:getContatosByCodClienteReturn" returnType="xsd:string" soapAction="" xmlns:ns16="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns16:codCliente" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="cadastrarContato" qname="ns17:cadastrarContato" returnQName="ns17:cadastrarContatoReturn" returnType="xsd:boolean" soapAction="" xmlns:ns17="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns17:codCliente" type="xsd:int"/>
+   <ns1:parameter qname="ns17:codContrato" type="xsd:int"/>
+   <ns1:parameter qname="ns17:ddd1" type="xsd:string"/>
+   <ns1:parameter qname="ns17:ddd2" type="xsd:string"/>
+   <ns1:parameter qname="ns17:ddd3" type="xsd:string"/>
+   <ns1:parameter qname="ns17:ddd4" type="xsd:string"/>
+   <ns1:parameter qname="ns17:telefone1" type="xsd:string"/>
+   <ns1:parameter qname="ns17:telefone2" type="xsd:string"/>
+   <ns1:parameter qname="ns17:telefone3" type="xsd:string"/>
+   <ns1:parameter qname="ns17:telefone4" type="xsd:string"/>
+   <ns1:parameter qname="ns17:tratamento" type="xsd:string"/>
+   <ns1:parameter qname="ns17:comoSerChamado" type="xsd:string"/>
+   <ns1:parameter qname="ns17:codSetor" type="xsd:int"/>
+   <ns1:parameter qname="ns17:codAssunto" type="xsd:int"/>
+   <ns1:parameter qname="ns17:codFormaContato" type="xsd:int"/>
+   <ns1:parameter qname="ns17:observacao" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="solicitarSenha" qname="ns18:solicitarSenha" returnQName="ns18:solicitarSenhaReturn" returnType="xsd:boolean" soapAction="" xmlns:ns18="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns18:cpf" type="xsd:string"/>
+   <ns1:parameter qname="ns18:email" type="xsd:string"/>
+   <ns1:parameter qname="ns18:contato" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="solicitarSenha cadastrarContato getContatosByCodCliente"/>
+  <ns1:parameter name="wsdlPortType" value="ContatoService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServicePort" value="ContatoService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.ContatoService"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="ContatoServiceService"/>
+ </ns1:service>
+ <ns1:service name="AutocensuraService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getAutocesura" qname="ns19:getAutocesura" returnQName="ns19:getAutocesuraReturn" returnType="xsd:string" soapAction="" xmlns:ns19="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns19:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="addAutocensura" qname="ns20:addAutocensura" returnQName="ns20:addAutocensuraReturn" returnType="xsd:string" soapAction="" xmlns:ns20="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns20:codContrato" type="xsd:int"/>
+   <ns1:parameter qname="ns20:palavra" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="addAutocensuraLista" qname="ns21:addAutocensuraLista" returnQName="ns21:addAutocensuraListaReturn" returnType="xsd:string" soapAction="" xmlns:ns21="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns21:codContrato" type="xsd:int"/>
+   <ns1:parameter qname="ns21:codLista" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="removeAutocensura" qname="ns22:removeAutocensura" soapAction="" xmlns:ns22="http://services.opusserver.digital.com.br">
+   <ns1:parameter qname="ns22:cod" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getListaSitesFiltro" qname="ns23:getListaSitesFiltro" returnQName="ns23:getListaSitesFiltroReturn" returnType="xsd:string" soapAction="" xmlns:ns23="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:parameter name="allowedMethods" value="addAutocensuraLista getAutocesura getListaSitesFiltro removeAutocensura addAutocensura"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="AutocensuraService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.AutocensuraService"/>
+  <ns1:parameter name="wsdlServicePort" value="AutocensuraService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="AutocensuraServiceService"/>
+ </ns1:service>
+ <ns1:service name="HistoricoAcessoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getHistoricoAcesso" qname="ns24:getHistoricoAcesso" returnQName="ns24:getHistoricoAcessoReturn" returnType="xsd:string" soapAction="" xmlns:ns24="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns24:cod" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getHistoricoAcesso"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="HistoricoAcessoService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.HistoricoAcessoService"/>
+  <ns1:parameter name="wsdlServicePort" value="HistoricoAcessoService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="HistoricoAcessoServiceService"/>
+ </ns1:service>
+ <ns1:service name="OseService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="concluirOse" qname="ns25:concluirOse" soapAction="" xmlns:ns25="http://services.opusserver.digital.com.br">
+   <ns1:parameter qname="ns25:cod_ose" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns25:tecnico" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="encaminharOse" qname="ns26:encaminharOse" soapAction="" xmlns:ns26="http://services.opusserver.digital.com.br">
+   <ns1:parameter qname="ns26:os" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns26:veiculo" type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns26:tecnico" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:operation name="getOse" qname="ns27:getOse" returnQName="ns27:getOseReturn" returnType="xsd:string" soapAction="" xmlns:ns27="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns27:codEmpresa" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="concluirOse encaminharOse getOse"/>
+  <ns1:parameter name="wsdlPortType" value="OseService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServicePort" value="OseService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.OseService"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="OseServiceService"/>
+ </ns1:service>
+ <ns1:service name="EnderecoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="findEndereco" qname="ns28:findEndereco" returnQName="ns28:findEnderecoReturn" returnType="xsd:string" soapAction="" xmlns:ns28="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns28:codEndereco" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="getEnderecos" qname="ns29:getEnderecos" returnQName="ns29:getEnderecosReturn" returnType="xsd:string" soapAction="" xmlns:ns29="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns29:codCliente" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="findEndereco getEnderecos"/>
+  <ns1:parameter name="wsdlPortType" value="EnderecoService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServicePort" value="EnderecoService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.EnderecoService"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="EnderecoServiceService"/>
+ </ns1:service>
+ <ns1:service name="SetorService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getSetores" qname="ns30:getSetores" returnQName="ns30:getSetoresReturn" returnType="xsd:string" soapAction="" xmlns:ns30="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns30:codEmpresa" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getSetores"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="SetorService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.SetorService"/>
+  <ns1:parameter name="wsdlServicePort" value="SetorService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="SetorServiceService"/>
+ </ns1:service>
+ <ns1:service name="ClienteService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="atualizarDadosCadastro" qname="ns31:atualizarDadosCadastro" returnQName="ns31:atualizarDadosCadastroReturn" returnType="xsd:boolean" soapAction="" xmlns:ns31="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns31:codCliente" type="xsd:int"/>
+   <ns1:parameter qname="ns31:ddd1" type="xsd:string"/>
+   <ns1:parameter qname="ns31:telefone1" type="xsd:string"/>
+   <ns1:parameter qname="ns31:ddd2" type="xsd:string"/>
+   <ns1:parameter qname="ns31:telefone2" type="xsd:string"/>
+   <ns1:parameter qname="ns31:ddd3" type="xsd:string"/>
+   <ns1:parameter qname="ns31:telefone3" type="xsd:string"/>
+   <ns1:parameter qname="ns31:ddd4" type="xsd:string"/>
+   <ns1:parameter qname="ns31:telefone4" type="xsd:string"/>
+   <ns1:parameter qname="ns31:comoNosConheceu" type="xsd:int"/>
+   <ns1:parameter qname="ns31:comoQuerSerChamado" type="xsd:string"/>
+   <ns1:parameter qname="ns31:tratamento" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="findById" qname="ns32:findById" returnQName="ns32:findByIdReturn" returnType="xsd:string" soapAction="" xmlns:ns32="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns32:codCliente" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="findByCpf" qname="ns33:findByCpf" returnQName="ns33:findByCpfReturn" returnType="xsd:boolean" soapAction="" xmlns:ns33="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns33:cpf" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="findByCpf findById atualizarDadosCadastro"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="ClienteService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.ClienteService"/>
+  <ns1:parameter name="wsdlServicePort" value="ClienteService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="ClienteServiceService"/>
+ </ns1:service>
+ <ns1:service name="LoginTecnicoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="fazerLogin" qname="ns34:fazerLogin" returnQName="ns34:fazerLoginReturn" returnType="xsd:boolean" soapAction="" xmlns:ns34="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns34:usuario" type="xsd:string"/>
+   <ns1:parameter qname="ns34:senha" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="fazerLogin"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="LoginTecnicoService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.LoginTecnicoService"/>
+  <ns1:parameter name="wsdlServicePort" value="LoginTecnicoService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="LoginTecnicoServiceService"/>
+ </ns1:service>
+ <ns1:service name="FinanceiroService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="verificarBoletoPendentePrePago" qname="ns35:verificarBoletoPendentePrePago" returnQName="ns35:verificarBoletoPendentePrePagoReturn" returnType="xsd:boolean" soapAction="" xmlns:ns35="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns35:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="findbyId" qname="ns36:findbyId" returnQName="ns36:findbyIdReturn" returnType="xsd:string" soapAction="" xmlns:ns36="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns36:codBoleto" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="getInfoBoleto" qname="ns37:getInfoBoleto" returnQName="ns37:getInfoBoletoReturn" returnType="xsd:string" soapAction="" xmlns:ns37="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns37:codBoleto" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:operation name="procurarBoletosDoAcessoPorContrato" qname="ns38:procurarBoletosDoAcessoPorContrato" returnQName="ns38:procurarBoletosDoAcessoPorContratoReturn" returnType="xsd:string" soapAction="" xmlns:ns38="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns38:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="findbyId verificarBoletoPendentePrePago getInfoBoleto procurarBoletosDoAcessoPorContrato"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="FinanceiroService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.FinanceiroService"/>
+  <ns1:parameter name="wsdlServicePort" value="FinanceiroService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="FinanceiroServiceService"/>
+ </ns1:service>
+ <ns1:service name="CrmAssuntoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getAssuntos" qname="ns39:getAssuntos" returnQName="ns39:getAssuntosReturn" returnType="xsd:string" soapAction="" xmlns:ns39="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns39:codEmpresa" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getAssuntos"/>
+  <ns1:parameter name="wsdlPortType" value="CrmAssuntoService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServicePort" value="CrmAssuntoService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.CrmAssuntoService"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="CrmAssuntoServiceService"/>
+ </ns1:service>
+ <ns1:service name="AdminService" provider="java:MSG">
+  <ns1:parameter name="allowedMethods" value="AdminService"/>
+  <ns1:parameter name="enableRemoteAdmin" value="false"/>
+  <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
+ </ns1:service>
+ <ns1:service name="PlanoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getPlanosbyContrato" qname="ns41:getPlanosbyContrato" returnQName="ns41:getPlanosbyContratoReturn" returnType="xsd:string" soapAction="" xmlns:ns41="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns41:codContrato" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getPlanosbyContrato"/>
+  <ns1:parameter name="wsdlPortType" value="PlanoService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServicePort" value="PlanoService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.PlanoService"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="PlanoServiceService"/>
+ </ns1:service>
+ <ns1:service name="ComoNosConheceuService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getComoNosConheceuList" qname="ns42:getComoNosConheceuList" returnQName="ns42:getComoNosConheceuListReturn" returnType="xsd:string" soapAction="" xmlns:ns42="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:parameter name="allowedMethods" value="getComoNosConheceuList"/>
+  <ns1:parameter name="wsdlPortType" value="ComoNosConheceuService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServicePort" value="ComoNosConheceuService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.ComoNosConheceuService"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="ComoNosConheceuServiceService"/>
+ </ns1:service>
+ <ns1:service name="Version" provider="java:RPC">
+  <ns1:parameter name="allowedMethods" value="getVersion"/>
+  <ns1:parameter name="className" value="org.apache.axis.Version"/>
+ </ns1:service>
+ <ns1:service name="VeiculoService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getVeiculos" qname="ns43:getVeiculos" returnQName="ns43:getVeiculosReturn" returnType="xsd:string" soapAction="" xmlns:ns43="http://services.opusserver.digital.com.br" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns43:codEmpresa" type="xsd:int"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getVeiculos"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="VeiculoService"/>
+  <ns1:parameter name="className" value="br.com.digital.opusserver.services.VeiculoService"/>
+  <ns1:parameter name="wsdlServicePort" value="VeiculoService"/>
+  <ns1:parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+  <ns1:parameter name="wsdlServiceElement" value="VeiculoServiceService"/>
+ </ns1:service>
+ <ns1:transport name="http">
+  <ns1:requestFlow>
+   <ns1:handler type="URLMapper"/>
+   <ns1:handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </ns1:requestFlow>
+  <ns1:parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <ns1:parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </ns1:transport>
+ <ns1:transport name="local">
+  <ns1:responseFlow>
+   <ns1:handler type="LocalResponder"/>
+  </ns1:responseFlow>
+ </ns1:transport>
+</ns1:deployment>

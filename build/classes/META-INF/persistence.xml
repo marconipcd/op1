@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="OpusERP4" transaction-type="RESOURCE_LOCAL">
+	
+		<class>com.digital.opuserp.domain.Usuario</class>
+		<class>com.digital.opuserp.domain.Categorias</class>
+		<class>com.digital.opuserp.domain.Ceps</class>
+		<class>com.digital.opuserp.domain.Transportadoras</class>
+		<class>com.digital.opuserp.domain.Empresa</class>
+		<class>com.digital.opuserp.domain.EmpresasUsuario</class>
+		<class>com.digital.opuserp.domain.SubModulo</class>
+		<class>com.digital.opuserp.domain.SubmoduloEmpresa</class>
+		<class>com.digital.opuserp.domain.Modulo</class>
+		<class>com.digital.opuserp.domain.ModulosEmpresa</class>
+		<class>com.digital.opuserp.domain.ModuloUsuario</class>
+		<class>com.digital.opuserp.domain.SubModuloUsuario</class>
+		<class>com.digital.opuserp.domain.Cliente</class>
+		<class>com.digital.opuserp.domain.Endereco</class>
+		<class>com.digital.opuserp.domain.EnderecoCobranca</class>
+		<class>com.digital.opuserp.domain.EnderecoEntrega</class>
+		<class>com.digital.opuserp.domain.Setores</class>
+		<class>com.digital.opuserp.domain.Veiculos</class>
+		<class>com.digital.opuserp.domain.Fornecedor</class>
+		<class>com.digital.opuserp.domain.TabelasPreco</class>
+		<class>com.digital.opuserp.domain.Concentrador</class>
+		<class>com.digital.opuserp.domain.ContratosAcesso</class>		
+		<class>com.digital.opuserp.domain.PlanoAcesso</class>
+		<class>com.digital.opuserp.domain.AcessoCliente</class>
+		<class>com.digital.opuserp.domain.EcfPreVendaCabecalho</class>
+		<class>com.digital.opuserp.domain.CreditoCliente</class>
+		<class>com.digital.opuserp.domain.ContasReceber</class>
+		<class>com.digital.opuserp.domain.SetoresUsuario</class>
+		<class>com.digital.opuserp.domain.Permissoes</class>
+		<class>com.digital.opuserp.domain.LogError</class>
+		<class>com.digital.opuserp.domain.Notas</class>
+		<class>com.digital.opuserp.domain.CrmAssunto</class>
+		<class>com.digital.opuserp.domain.CrmFormasContato</class>
+		<class>com.digital.opuserp.domain.Crm</class>
+		<class>com.digital.opuserp.domain.Ose</class>
+		<class>com.digital.opuserp.domain.Osi</class>
+		<class>com.digital.opuserp.domain.Osp</class>
+		<class>com.digital.opuserp.domain.MovimentoEntCabecalho</class>
+		<class>com.digital.opuserp.domain.Produto</class>
+		<class>com.digital.opuserp.domain.RamoAtividade</class>
+		<class>com.digital.opuserp.domain.ComoNosConheceu</class>
+		<class>com.digital.opuserp.domain.FormaPagamento</class>
+		<class>com.digital.opuserp.domain.EcfPreVendaDetalhe</class>
+		<class>com.digital.opuserp.domain.Cnae</class>
+		<class>com.digital.opuserp.domain.RadCheck</class>
+		<class>com.digital.opuserp.domain.RadGroupReply</class>
+		<class>com.digital.opuserp.domain.RadUserGgroup</class>
+		<class>com.digital.opuserp.domain.RadReply</class>
+		<class>com.digital.opuserp.domain.RadAcct</class>
+		<class>com.digital.opuserp.domain.AcessoBoleto</class>
+		<class>com.digital.opuserp.domain.FiltroAcesso</class>
+		<class>com.digital.opuserp.domain.ContaBancaria</class>
+		<class>com.digital.opuserp.domain.FormasPgto</class>
+		<class>com.digital.opuserp.domain.Base</class>
+		<class>com.digital.opuserp.domain.AlertaPendencia</class>
+		<class>com.digital.opuserp.domain.RegistroTrocaMaterial</class>
+		<class>com.digital.opuserp.domain.ClienteBloqueado</class>
+		<class>com.digital.opuserp.domain.Swith</class>
+		<class>com.digital.opuserp.domain.ConfigAcesso</class>
+		<class>com.digital.opuserp.domain.GrupoProduto</class>
+		<class>com.digital.opuserp.domain.LogAcoes</class>
+		<class>com.digital.opuserp.domain.Servico</class>
+		<class>com.digital.opuserp.domain.SerialProduto</class>
+		<class>com.digital.opuserp.domain.PrintLog</class>
+		<class>com.digital.opuserp.domain.RelatorioPre</class>
+		<class>com.digital.opuserp.domain.RelatorioPreFiltro</class>
+		<class>com.digital.opuserp.domain.RelatorioPreColunas</class>
+		<class>com.digital.opuserp.domain.ParametrosBoleto</class>
+		<class>com.digital.opuserp.domain.CentralAssinante</class>
+		<class>com.digital.opuserp.domain.TiposProblemasOsi</class>
+		<class>com.digital.opuserp.domain.GrupoOse</class>
+		<class>com.digital.opuserp.domain.SubGrupoOse</class>
+		<class>com.digital.opuserp.domain.TipoSubGrupoOse</class>
+		<class>com.digital.opuserp.domain.RegistroLiquidado</class>
+		<class>com.digital.opuserp.domain.AlteracoesContrato</class>
+		<class>com.digital.opuserp.domain.AlteracoesCrm</class>
+		<class>com.digital.opuserp.domain.LogAcoesCRM</class>
+		<class>com.digital.opuserp.domain.ServicosItensOsi</class>
+		<class>com.digital.opuserp.domain.GrupoServico</class>
+		<class>com.digital.opuserp.domain.AlteracoesAssistencia</class>
+		<class>com.digital.opuserp.domain.AlteracoesOse</class>
+		<class>com.digital.opuserp.domain.AlteracoesOsp</class>
+		<class>com.digital.opuserp.domain.Marca</class>
+		<class>com.digital.opuserp.domain.UnidadeProduto</class>
+		<class>com.digital.opuserp.domain.Haver</class>
+		<class>com.digital.opuserp.domain.AlteracoesHaver</class>
+		<class>com.digital.opuserp.domain.NaturezaOperacao</class>
+		<class>com.digital.opuserp.domain.SeriaisPedido</class>
+		<class>com.digital.opuserp.domain.ArquivosOsp</class>
+		<class>com.digital.opuserp.domain.VendaServicoCabecalho</class>
+		<class>com.digital.opuserp.domain.VendaServicoDetalhe</class>
+		<class>com.digital.opuserp.domain.MovimentoEntDetalhe</class>
+		<class>com.digital.opuserp.domain.SeriaisCompra</class>
+		<class>com.digital.opuserp.domain.HaverEmpresas</class>
+		<class>com.digital.opuserp.domain.HaverBoleto</class>
+		<class>com.digital.opuserp.domain.ConfigOsi</class>
+		<class>com.digital.opuserp.domain.ListaSitesFiltroC</class>
+		<class>com.digital.opuserp.domain.ListaSitesFiltroD</class>
+		<class>com.digital.opuserp.domain.ContasPagar</class>
+		<class>com.digital.opuserp.domain.Contas</class>
+		<class>com.digital.opuserp.domain.Pool</class>
+		<class>com.digital.opuserp.domain.AlteracoesContasPg</class>
+		<class>com.digital.opuserp.domain.Perguntas</class>
+		<class>com.digital.opuserp.domain.Respostas</class>
+		<class>com.digital.opuserp.domain.CrmPesquisaRel</class>
+		<class>com.digital.opuserp.domain.PreferenciasDashboard</class>
+		<class>com.digital.opuserp.domain.StatusRotinas</class>
+		<class>com.digital.opuserp.domain.ControleTitulo</class>		
+		<class>com.digital.opuserp.domain.CstOrigem</class>
+		<class>com.digital.opuserp.domain.CstFormaTributo</class>
+		<class>com.digital.opuserp.domain.SimplesNacional</class>
+		<class>com.digital.opuserp.domain.EcfEmissorCupFiscal</class>
+		<class>com.digital.opuserp.domain.AlteracoesProduto</class>
+		<class>com.digital.opuserp.domain.Cofins</class>
+		<class>com.digital.opuserp.domain.Cofinsst</class>
+		<class>com.digital.opuserp.domain.Icms</class>
+		<class>com.digital.opuserp.domain.Ii</class>
+		<class>com.digital.opuserp.domain.Ipi</class>
+		<class>com.digital.opuserp.domain.Issqn</class>
+		<class>com.digital.opuserp.domain.Pis</class>
+		<class>com.digital.opuserp.domain.Pisst</class>
+		<class>com.digital.opuserp.domain.AlteracoesContasReceber</class>
+		<class>com.digital.opuserp.domain.Cfop</class>
+		<class>com.digital.opuserp.domain.Municipios</class>
+		<class>com.digital.opuserp.domain.Ncm</class>
+		<class>com.digital.opuserp.domain.CstCofins</class>
+		<class>com.digital.opuserp.domain.CstIpi</class>
+		<class>com.digital.opuserp.domain.CstPis</class>
+		<class>com.digital.opuserp.domain.Parametizacao</class>
+		<class>com.digital.opuserp.domain.TotaisPedido</class>
+		<class>com.digital.opuserp.domain.AlteracoesSerial</class>
+		<class>com.digital.opuserp.domain.ConfigCentralAssinante</class>
+		<class>com.digital.opuserp.domain.InterfaceWireless</class>
+		<class>com.digital.opuserp.domain.AlteracoesMateriais</class>
+		<class>com.digital.opuserp.domain.BasesAnalitico</class>
+		<class>com.digital.opuserp.domain.NfeMestre</class>
+		<class>com.digital.opuserp.domain.ServicoPlano</class>
+		<class>com.digital.opuserp.domain.ArquivoRemessaNfe</class>
+		<class>com.digital.opuserp.domain.ConfigNfe</class>
+		<class>com.digital.opuserp.domain.SystemEvents</class>
+		<class>com.digital.opuserp.domain.Chat</class>
+		<class>com.digital.opuserp.domain.Nfe</class>
+		<class>com.digital.opuserp.domain.Estados</class>
+		<class>com.digital.opuserp.domain.CidadeIbge</class>
+		<class>com.digital.opuserp.domain.ConfigNfeMod55</class>
+		<class>com.digital.opuserp.domain.ProdutoEntrada</class>
+		<class>com.digital.opuserp.domain.ChecklistOsEquipamento</class>
+		<class>com.digital.opuserp.domain.ChecklistOsLocalizacao</class>
+		<class>com.digital.opuserp.domain.ChecklistOsInstalacao</class>
+		<class>com.digital.opuserp.domain.RmaMestre</class>
+		<class>com.digital.opuserp.domain.RmaDetalhe</class>
+		<class>com.digital.opuserp.domain.HaverCab</class>
+		<class>com.digital.opuserp.domain.AlteracoesHaverCab</class>
+		<class>com.digital.opuserp.domain.HaverDetalhe</class>
+		<class>com.digital.opuserp.domain.AlteracoesRma</class>
+		<class>com.digital.opuserp.domain.ConfigBoleto</class>
+		<class>com.digital.opuserp.domain.Cest</class>
+		<class>com.digital.opuserp.domain.Redes</class>
+		<class>com.digital.opuserp.domain.Splits</class>
+		<class>com.digital.opuserp.domain.Olts</class>
+		<class>com.digital.opuserp.domain.OseProduto</class>
+		<class>com.digital.opuserp.domain.TipoItemProduto</class>
+		<class>com.digital.opuserp.domain.ConfigOse</class>
+		<class>com.digital.opuserp.domain.Profissoes</class>
+		<class>com.digital.opuserp.domain.PlanosManutencao</class>
+		<class>com.digital.opuserp.domain.ContratoManutencao</class>
+		<class>com.digital.opuserp.domain.LogProduto</class>
+		<class>com.digital.opuserp.domain.MateriaisAlocados</class>
+		<class>com.digital.opuserp.domain.MateriaisAlocadosDetalhe</class>
+		<class>com.digital.opuserp.domain.RemessaBanco</class>
+		<class>com.digital.opuserp.domain.EstoqueMovel</class>
+		<class>com.digital.opuserp.domain.AlteracoesEstoqueMovel</class>
+		<class>com.digital.opuserp.domain.FluxoCaixa</class>
+		<class>com.digital.opuserp.domain.EmpresaFornecedor</class>
+		<class>com.digital.opuserp.domain.EmpresaGrupoProduto</class>
+		<class>com.digital.opuserp.domain.EmpresaMarcas</class>
+		<class>com.digital.opuserp.domain.AgendamentoBloqueioDesbloqueio</class>
+		<class>com.digital.opuserp.domain.AgendaRenovacoes</class>
+		<class>com.digital.opuserp.domain.LogPedidos</class>
+		<class>com.digital.opuserp.domain.Pendencias</class>
+		<class>com.digital.opuserp.domain.TransferenciaProduto</class>
+		<class>com.digital.opuserp.domain.HistoricoDesbloqueio72Horas</class>
+		<class>com.digital.opuserp.domain.CategoriaLojaIntegrada</class>
+		<class>com.digital.opuserp.domain.CatLojaProduto</class>
+		<class>com.digital.opuserp.domain.IndicacoesCliente</class>
+		<class>com.digital.opuserp.domain.AtualizacoesSoftware</class>
+		<class>com.digital.opuserp.domain.CarneCab</class>
+		<class>com.digital.opuserp.domain.CarneDet</class>
+		<class>com.digital.opuserp.domain.PreContrato</class>
+		<class>com.digital.opuserp.domain.UsuarioConcentradores</class>
+		<class>com.digital.opuserp.domain.FotosProdutos</class>
+		<class>com.digital.opuserp.domain.ArquivosContrato</class>
+		<class>com.digital.opuserp.domain.ArquivosOse</class>
+		<class>com.digital.opuserp.domain.OcorrenciaContasReceber</class>
+		<class>com.digital.opuserp.domain.PlanoAcao</class>
+		<class>com.digital.opuserp.domain.ConfigPlanoAcao</class>
+		<class>com.digital.opuserp.domain.ArquivosContrato2</class>
+		<class>com.digital.opuserp.domain.ArquivosOse2</class>
+		<class>com.digital.opuserp.domain.FichaCegaCab</class>
+		<class>com.digital.opuserp.domain.FichaCegaDet</class>
+	
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+			<property name="hibernate.default_catalog" value="db_opus"/>
+			
+<!-- 		<property name="hibernate.default_catalog" value="opus_bkp"/> -->			
+<!-- 		<property name="hibernate.connection.url" value="jdbc:mysql://172.17.0.11/opus_bkp?autoReconnect=true"/> -->
+			
+			<property name="hibernate.connection.url" value="jdbc:mysql://172.17.0.11/db_opus?autoReconnect=true"/>
+			<property name="hibernate.connection.username" value="root"/>
+			<property name="hibernate.connection.password" value="managerdigi_1q2w3e4r5t"/>
+			
+			<!-- 179.127.32.11 -->
+			<!--<property name="hibernate.connection.url" value="jdbc:mysql://172.17.0.11/db_opus"/>
+			 <property name="hibernate.connection.username" value="opus"/>
+			<property name="hibernate.connection.password" value="dHGTZ-rWPXDa7myzd#dzym7aDXPWr-ZTGHd"/>-->
+			
+<!-- 			<property name="hibernate.connection.url" value="jdbc:mysql://172.17.0.11/db_opus?autoReconnect=true"/> -->
+<!-- 			<property name="hibernate.connection.username" value="root"/> -->
+<!-- 			<property name="hibernate.connection.password" value="managerdigi_1q2w3e4r5t"/> -->
+			
+			
+			
+			
+			<!-- property name="hibernate.connection.password" value="1q2w3e4r5t"/>-->
+
+			<!-- 9upTwP8hxWrac8SB -->		
+			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://127.0.0.1:3311/db_opus"/> 										-->
+			<!-- <property name="hibernate.connection.username" value="root"/> 																	-->
+			<!-- <property name="hibernate.connection.password" value="root"/> 																	-->
+			<!-- <property name="hibernate.connection.url" value="jdbc:mysql://mysql-env-6554818.jelastic.hostdime.com/opus"/> 					-->
+			<!-- <property name="hibernate.default_catalog" value="opus"/> 																		-->
+			<!-- <property name="hibernate.connection.username" value="opus"/> 																	-->
+			<!-- <property name="hibernate.connection.password" value="dHGTZrWPXDa7myzd"/> 														-->
+			<!-- <property name="hibenate.show.sql" value="false"/> 																			-->
+			<!-- <property name="hibernate.hbm2ddl.auto" value="update"/>   																	-->
+			<!-- <property name="hibernate.cache.use_second_level_cache" value="false" /> 														-->
+			<!-- <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider" /> 								-->
+			<!-- <property name="hibernate.cache.use_query_cache" value="false" /> 																-->
+		</properties>
+		
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>OpusERP4</display-name>
+  <context-param>
+  	<description>Vaadin production mode</description>
+  	<param-name>productionMode</param-name>
+  	<param-value>true</param-value>
+  </context-param>
+  <context-param> <!-- or init-param -->
+	    <param-name>closeIdleSessions</param-name>
+	    <param-value>true</param-value>
+  </context-param>
+  <context-param>
+        <param-name>org.atmosphere.cpr.sessionSupport</param-name>
+        <param-value>true</param-value>
+  </context-param>
+  <session-config>
+	   	<session-timeout>60</session-timeout>
+  </session-config>
+  <servlet>
+  	<servlet-name>OpusERP</servlet-name>
+  	<servlet-class>com.digital.opuserp.CustomServlet</servlet-class>
+  	<init-param>
+  		<description>Vaadin UI class to use</description>
+  		<param-name>UI</param-name>
+  		<param-value>com.digital.opuserp.OpusERP4UI</param-value>
+  	</init-param>
+  	<init-param>
+  		<description>
+  		Legacy mode to return the value of the property as a string from AbstractProperty.toString()</description>
+  		<param-name>legacyPropertyToString</param-name>
+  		<param-value>false</param-value>
+  	</init-param>
+  	<init-param>
+  		<description>
+  		Application widgetset</description>
+  		<param-name>widgetset</param-name>
+  		<param-value>com.digital.opuserp.widgetset.OpuserpWidgetset</param-value>
+  	</init-param>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>OpusERP</servlet-name>
+  	<url-pattern>/*</url-pattern>
+  </servlet-mapping>
+ 
+ 
+	 <filter>
+	    <filter-name>EntityManagerFilter</filter-name>
+	    <filter-class>com.digital.opuserp.filter.EntityManagerFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	    <filter-name>EntityManagerFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,56 @@
+@mixin contratos-view{
+
+	.v-caption-caption-align-contrato{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 165px;
+	}
+	
+	.v-caption-caption-align-contrato-plano{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 260px;
+	}
+	
+	.v-caption-caption-align-contrato-total{
+		display: inline-block;    
+		padding-right: 15px;
+		padding-left: 15px;
+		width: 246px;
+	}
+	
+	.v-caption-caption-align-acesso{
+		display: inline-block;    
+		padding-right: 5px;
+		padding-left: 1px;
+		width: 160px;	
+	}
+	
+	.v-caption-caption-align-endTitular{
+		display: inline-block;    
+		padding-right: 5px;
+		padding-left: 1px;
+		width: 220px;	
+	}
+	
+	.v-caption-caption-align-crm{
+		display: inline-block;    
+		padding-right: 5px;
+		padding-left: 1px;
+		width: 60px;	
+	}
+	
+	.v-caption-caption-align-renovar-acesso{
+		display: inline-block;    
+		padding-right: 5px;
+		padding-left: 1px;
+		width: 187px;	
+	}
+
+	.v-button-atualizar{
+	 padding: .1em .4em;
+	}
+		
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ContaBancariaServiceService WSDL service -->
+
+  <service name="ContaBancariaService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://services.opusserver.digital.com.br"/>
+      <parameter name="wsdlServiceElement" value="ContaBancariaServiceService"/>
+      <parameter name="schemaQualified" value="http://services.opusserver.digital.com.br"/>
+      <parameter name="wsdlServicePort" value="ContaBancariaService"/>
+      <parameter name="className" value="br.com.digital.opusserver.services.ContaBancariaService"/>
+      <parameter name="wsdlPortType" value="ContaBancariaService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://services.opusserver.digital.com.br" xmlns:retNS="http://services.opusserver.digital.com.br" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getContaBancaria" qname="operNS:getContaBancaria" returnQName="retNS:getContaBancariaReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codEmpresa" type="tns:int"/>
+        <parameter xmlns:pns="http://services.opusserver.digital.com.br" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:codContrato" type="tns:int"/>
+      </operation>
+      <parameter name="allowedMethods" value="getContaBancaria"/>
+
+  </service>
+</deployment>

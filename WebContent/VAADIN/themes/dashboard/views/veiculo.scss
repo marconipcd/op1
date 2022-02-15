@@ -1,0 +1,124 @@
+@mixin veiculo-view{
+
+	.v-caption-caption-align-veiculos{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px;
+    	width: 140px;
+	}
+
+	
+	.v-caption-caption-align-veiculos-garantia{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 10px; 	
+    	width: 65px;
+	}
+	.v-caption-caption-align-veiculos-ipva{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	padding-left: 15px;
+    	width: 115px;
+	}
+	
+	
+	
+	.v-caption-textfield-invalid-cpf{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	margin-left: 10px;
+    
+	}
+	
+	.v-caption-textfield-valid-cpf{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	margin-left: 10px;
+    	
+	}
+	
+	.v-textfield-textfield-invalid-cpf{
+		color:red;
+	}
+	.v-textfield-textfield-valid-cpf{
+		color:green;
+	}
+	
+	
+	
+	
+	
+	.veiculo-cnpj_none{
+		display:none;
+		padding-top: 10px;
+		color:#FFFFFF;
+	}
+	
+	.veiculos-ultRevisao{
+		margin-right: 20px;
+	}
+	
+	.v-caption-caption-align-veiculos-cod{
+    	display: inline-block;    
+    	padding-right: 0px;
+    	padding-left: 0px;
+	}
+	
+	.v-caption-caption-align-veiculos-marca{
+    	display: inline-block;    
+    	padding-right: 0px;
+    	padding-left: 70px;
+	}
+	
+	.v-caption-caption-align-veiculos-cor{
+    	display: inline-block;    
+    	padding-right: 0px;
+    	padding-left: 86px;
+	}
+	
+	.v-caption-caption-align-veiculos-chassi{
+    	display: inline-block;    
+    	padding-right: 0px;
+    	padding-left: 69px;
+	}
+	
+	.v-caption-caption-align-veiculos-combustivel{
+    	display: inline-block;    
+    	padding-right: 0px;
+    	padding-left: 32px;
+	}
+	
+	.v-caption-caption-align-veiculos-cpf_cnpj_proprietario{
+    	display: inline-block;    
+    	padding-right: 5px;
+    	margin-left: -10px;
+ 
+	}
+	
+	.v-caption-caption-align-veiculos-nome_proprietario{
+		display: inline-block;    
+		padding-right: 0px;
+		padding-left: 34px;
+	}
+	
+	.v-caption-caption-align-veiculos-seguradora{
+		display: inline-block;    
+		padding-right: 0px;
+		padding-left: 37px;
+	}
+	
+	.v-caption-caption-align-veiculos-venc_seguro{
+		display: inline-block;    
+		padding-right: 0px;
+		padding-left: 9px;
+	}
+	
+	.v-caption-caption-align-veiculos-km_atual{
+		display: inline-block;    
+		padding-right: 0px;
+		padding-top: 2px;
+		padding-left: 51px;
+	}
+
+
+}
